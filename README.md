@@ -6,7 +6,9 @@ Landing page institucional desenvolvida para a **Barbearia Imperial**, uma barbe
 
 ## 🖥️ Preview
 
-> Design escuro com detalhes dourados, tipografia serifada e animações sutis que transmitem a atmosfera premium da barbearia.
+🔗 **[barbearia-red-two.vercel.app](https://barbearia-red-two.vercel.app/)**
+
+[![Preview do site](https://api.microlink.io/?url=https://barbearia-red-two.vercel.app&screenshot=true&meta=false&embed=screenshot.url)](https://barbearia-red-two.vercel.app/)
 
 ---
 
