@@ -11,7 +11,7 @@ import { SectionDivider } from "./components/SectionDivider";
 
 function App() {
   return (
-    <div className="bg-[#121414] text-[#e2e2e2] min-h-screen selection:bg-[#d4af37] selection:text-[#3c2f00]">
+    <div className="bg-background text-on-surface min-h-screen selection:bg-primary-container selection:text-on-primary">
       <Navbar />
       <Hero />
       <SectionDivider />
