@@ -23,9 +23,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-500 border-b border-[rgba(212,175,55,0.15)] ${
+      className={`fixed top-0 w-full z-50 transition-all duration-500 border-b border-primary-container/15 ${
         scrolled
-          ? "bg-[rgba(10,10,10,0.97)] backdrop-blur-md"
+          ? "bg-overlay backdrop-blur-md"
           : "bg-transparent backdrop-blur-sm"
       }`}
     >
@@ -33,9 +33,9 @@ export default function Navbar() {
         {/* Logo */}
         <a
           href="#home"
-          className="text-[#f2ca50] font-serif font-bold tracking-tighter text-xl uppercase"
+          className="text-primary font-serif font-bold tracking-tighter text-xl uppercase"
         >
-          Imperial<span className="text-[#e2e2e2]"> Lauzane</span>
+          Imperial
         </a>
 
         {/* Desktop Links */}
@@ -47,8 +47,8 @@ export default function Navbar() {
               onClick={() => setActive(link.href)}
               className={`font-sans text-xs tracking-widest uppercase transition-colors duration-300 ${
                 active === link.href
-                  ? "text-[#f2ca50] border-b border-[#f2ca50] pb-0.5"
-                  : "text-[#d0c5af] hover:text-[#f2ca50]"
+                  ? "text-primary border-b border-primary pb-0.5"
+                  : "text-on-surface-variant hover:text-primary"
               }`}
             >
               {link.label}
@@ -59,14 +59,14 @@ export default function Navbar() {
         {/* CTA Button */}
         <a
           href="#contato"
-          className="hidden md:block bg-[#d4af37] text-[#3c2f00] px-6 py-2 text-xs font-semibold tracking-widest uppercase transition-all hover:bg-[#e9c349] active:scale-95"
+          className="hidden md:block bg-primary-container text-on-primary px-6 py-2 text-xs font-semibold tracking-widest uppercase transition-all hover:bg-surface-tint active:scale-95"
         >
-          Book Now
+          Marcar Horário
         </a>
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-[#f2ca50]"
+          className="md:hidden text-primary"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -75,7 +75,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#0c0f0f] border-t border-[rgba(212,175,55,0.15)] px-6 py-6 flex flex-col gap-5">
+        <div className="md:hidden bg-surface-container-lowest border-t border-primary-container/15 px-6 py-6 flex flex-col gap-5">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -86,8 +86,8 @@ export default function Navbar() {
               }}
               className={`font-sans text-xs tracking-widest uppercase transition-colors duration-300 ${
                 active === link.href
-                  ? "text-[#f2ca50]"
-                  : "text-[#d0c5af] hover:text-[#f2ca50]"
+                  ? "text-primary"
+                  : "text-on-surface-variant hover:text-primary"
               }`}
             >
               {link.label}
@@ -96,9 +96,9 @@ export default function Navbar() {
           <a
             href="#contato"
             onClick={() => setMenuOpen(false)}
-            className="bg-[#d4af37] text-[#3c2f00] px-6 py-2 text-xs font-semibold tracking-widest uppercase text-center"
+            className="bg-primary-container text-on-primary px-6 py-2 text-xs font-semibold tracking-widest uppercase text-center"
           >
-            Book Now
+            Marcar Horário
           </a>
         </div>
       )}

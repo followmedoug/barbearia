@@ -44,14 +44,14 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="servicos" className="py-24 bg-[#1a1c1c]">
+    <section id="servicos" className="py-24 bg-surface-container-low">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="font-sans text-xs text-[#f2ca50] tracking-[0.2em] uppercase mb-4">
+          <p className="font-sans text-xs text-primary tracking-[0.2em] uppercase mb-4">
             O Que Oferecemos
           </p>
-          <h3 className="font-serif font-bold text-[#e2e2e2] text-4xl md:text-5xl">
+          <h3 className="font-serif font-bold text-on-surface text-4xl md:text-5xl">
             Nossos Serviços
           </h3>
         </div>
@@ -61,41 +61,41 @@ export default function Services() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="bg-[#1e2020] p-8 border border-[rgba(212,175,55,0.15)] hover:border-[rgba(212,175,55,0.4)] transition-all duration-300 group"
+              className="bg-surface-container p-8 border border-primary-container/15 hover:border-primary-container/40 transition-all duration-300 group"
             >
               {/* Icon + Title */}
               <div className="flex items-center gap-4 mb-4">
                 <span className="text-3xl">{s.icon}</span>
-                <h4 className="font-serif font-semibold text-[#e2e2e2] text-xl">
+                <h4 className="font-serif font-semibold text-on-surface text-xl">
                   {s.title}
                 </h4>
               </div>
 
               {/* Divider */}
               <div className="flex items-center gap-2 mb-4">
-                <div className="h-px flex-1 bg-[rgba(212,175,55,0.2)]" />
+                <div className="h-px flex-1 bg-primary-container/20" />
                 <svg
-                  className="fill-[#d4af37]"
+                  className="fill-primary-container"
                   width="8"
                   height="8"
                   viewBox="0 0 8 8"
                 >
                   <polygon points="4,0 5,3 8,3 5.5,4.8 6.5,8 4,6 1.5,8 2.5,4.8 0,3 3,3" />
                 </svg>
-                <div className="h-px flex-1 bg-[rgba(212,175,55,0.2)]" />
+                <div className="h-px flex-1 bg-primary-container/20" />
               </div>
 
-              <p className="font-sans text-sm text-[#d0c5af] leading-relaxed mb-6">
+              <p className="font-sans text-sm text-on-surface-variant leading-relaxed mb-6">
                 {s.description}
               </p>
 
               <div className="flex items-center justify-between">
-                <span className="font-serif text-2xl text-[#f2ca50]">
+                <span className="font-serif text-2xl text-primary">
                   {s.price}
                 </span>
                 <a
                   href="#contato"
-                  className="font-sans text-xs tracking-widest uppercase text-[#3c2f00] bg-[#d4af37] px-4 py-2 transition-all hover:bg-[#e9c349] active:scale-95"
+                  className="font-sans text-xs tracking-widest uppercase text-on-primary bg-primary-container px-4 py-2 transition-all hover:bg-surface-tint active:scale-95"
                 >
                   Agendar
                 </a>
